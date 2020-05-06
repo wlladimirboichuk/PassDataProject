@@ -42,9 +42,6 @@
                                 </state>
                                 <connections>
                                     <action selector="logginTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c7Z-4c-eQ3"/>
-                                    <segue destination="4L2-1l-7xg" kind="popoverPresentation" popoverAnchorView="sUk-ZV-sHW" id="sQs-pq-9wu">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pass Data Project " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mOo-6t-ZM5">
@@ -74,6 +71,7 @@
                     <connections>
                         <outlet property="loginTF" destination="fsm-9E-cAI" id="ihv-kT-rHT"/>
                         <outlet property="passwordTF" destination="ENV-kn-Pvx" id="bEZ-Qt-Tma"/>
+                        <segue destination="4L2-1l-7xg" kind="show" identifier="detailSegue" id="ina-05-YRs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -85,16 +83,9 @@
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="4L2-1l-7xg" customClass="SecondViewController" customModule="PassDataProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gJh-QD-l0t">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2p2-nc-CC5">
-                                <rect key="frame" x="167" y="157" width="81" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="35"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p9p-e4-67L">
                                 <rect key="frame" x="158" y="527" width="99" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -107,17 +98,25 @@
                                     <action selector="goBackTapped:" destination="4L2-1l-7xg" eventType="touchUpInside" id="5MP-1R-67W"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2p2-nc-CC5">
+                                <rect key="frame" x="124" y="125" width="167" height="94"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="35"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <viewLayoutGuide key="safeArea" id="ccd-a1-T0I"/>
                     </view>
+                    <navigationItem key="navigationItem" id="ldv-QH-Uts"/>
                     <connections>
                         <outlet property="label" destination="2p2-nc-CC5" id="e7G-Jr-zBb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hhZ-6h-z5B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="875" y="110"/>
+            <point key="canvasLocation" x="873.91304347826099" y="109.82142857142857"/>
         </scene>
     </scenes>
 </document>
