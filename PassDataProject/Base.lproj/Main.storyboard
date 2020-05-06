@@ -53,6 +53,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9m9-CP-8as">
+                                <rect key="frame" x="112" y="590" width="187" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -71,12 +78,13 @@
                     <connections>
                         <outlet property="loginTF" destination="fsm-9E-cAI" id="ihv-kT-rHT"/>
                         <outlet property="passwordTF" destination="ENV-kn-Pvx" id="bEZ-Qt-Tma"/>
+                        <outlet property="resultLabel" destination="9m9-CP-8as" id="Uye-zY-S7f"/>
                         <segue destination="4L2-1l-7xg" kind="show" identifier="detailSegue" id="ina-05-YRs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="103" y="110"/>
+            <point key="canvasLocation" x="102.89855072463769" y="109.82142857142857"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="vgR-zk-5c2">
@@ -96,6 +104,7 @@
                                 </state>
                                 <connections>
                                     <action selector="goBackTapped:" destination="4L2-1l-7xg" eventType="touchUpInside" id="5MP-1R-67W"/>
+                                    <segue destination="wIa-nt-KFN" kind="unwind" unwindAction="unwindSegueToMainScreenWithSegue:" id="GYY-0x-gYE"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2p2-nc-CC5">
@@ -115,6 +124,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hhZ-6h-z5B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="wIa-nt-KFN" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="873.91304347826099" y="109.82142857142857"/>
         </scene>

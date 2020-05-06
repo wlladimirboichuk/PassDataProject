@@ -19,8 +19,7 @@ class SecondViewController: UIViewController {
         label.text = "Hello, \(login)"
     }
     @IBAction func goBackTapped(_ sender: UIButton) {
-        
+        performSegue(withIdentifier: "unwindSegue", sender: nil)
     }
 }
 
-   
